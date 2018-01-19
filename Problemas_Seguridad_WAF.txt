@@ -50,3 +50,5 @@ Si un atacante consigue el identificador de sesión de un usuario que ya está a
 ya sea a través de la URL o de una cookie.
 
 Esto es nuevo
+
+Esto es una nueva linea
