@@ -1,0 +1,50 @@
+Abuse of Functionality,Command Execution,HTTP Parser:
+
+Abuse of Functionality
+El abuso de la funcionalidad es un ataque que subvierte la funcionalidad prevista de una aplicación con el objetivo de atacarse a sí mismo o a otros. 
+Los ataques de Abuso de Funcionalidad pueden comprometer recursos, trabajar en los controles de acceso o filtrar información. Incluso pueden incluir situaciones en las que las funciones de una aplicación 
+parecen funcionar correctamente, pero en su lugar se utilizan para lograr un resultado indeseable o nefasto.
+Para evitar ataques de Abuso de Funcionalidad, los desarrolladores deben realizar ejercicios robustos de modelado de amenazas para cada característica de la aplicación. 
+Este modelo debe probarse contra un conjunto completo de casos de uso y abuso para garantizar que la aplicación solo habilite la funcionalidad prevista.
+
+Command Execution
+La sección de Ejecución de Comandos cubre los ataques diseñados para ejecutar comandos remotos en el sitio web.
+Todos los sitios web utilizan la entrada proporcionada por el usuario para cumplir con las solicitudes. A menudo, estos datos proporcionados por el usuario son
+utilizado para crear comandos de construcción que den como resultado contenido dinámico de la página web. Si este proceso está hecho
+inseguro, un atacante podría alterar la ejecución del comando.
+
+
+SQL Injection
+Un ataque de inyección SQL consiste en la "inyección" de una consulta SQL a través de los datos de entrada del cliente a la aplicación, 
+insertando código malicioso en cadenas que luego se pasan a una instancia de SQL Server para su análisis y ejecución. 
+El exploit de inyecciones SQL exitoso puede leer datos confidenciales de la base de datos, modificar datos de bases de datos, 
+ejecutar operaciones adm en la base de datos, recuperar el contenido de un archivo dado presente en el sistema de archivos DBMS y, en algunos casos, emitir comandos al sistema operativo.
+Inyección SQL
+SQL Injection permite a los atacantes falsificar identidad, manipular datos existentes, causar problemas de repudio como anular transacciones o cambiar saldos, 
+permitir la divulgación completa de todos los datos en el sistema, destruir los datos o hacer que no estén disponibles y convertirse en administradores de la base de datos servidor.
+Los ataques de inyección SQL explotan una vulnerabilidad de seguridad de la aplicación, por ejemplo, 
+cuando la entrada del usuario se filtra incorrectamente para caracteres de cadena incrustados en sentencias de SQL, o la entrada del usuario no se escribe con fuerza y ​​se ejecuta inesperadamente.
+Los ataques de inyección SQL permiten a los atacantes manipular, eliminar o robar datos confidenciales de bases de datos corporativas. 
+
+
+Attack Signature
+Las firmas de ataque son reglas o patrones que identifican ataques en una aplicación web. Cuando Application Security Manager ™ (ASM) recibe una solicitud del cliente 
+(o una respuesta del servidor), el sistema compara la solicitud o respuesta con las firmas de ataque asociadas con su política de seguridad. Si se detecta un patrón coincidente, ASM ™ desencadena 
+una violación detectada de la firma de ataque y alarmas o bloques según el modo de aplicación de su política de seguridad.
+Por ejemplo, la firma de ataque de inyección SQL busca ciertas expresiones como 'o 1 = 1, y si un usuario ingresa esa cadena en un campo (como el campo de nombre de usuario) 
+en su aplicación web, ASM puede bloquear la solicitud en base al SQL intento de inyección.
+Una política de seguridad ideal incluye solo las firmas de ataque necesarias para defender su aplicación. Si se incluyen demasiados, usted desperdicia recursos para mantenerse al día con las firmas que no necesita. 
+Del mismo modo, si no incluye suficiente, puede permitir que un ataque comprometa su aplicación sin saberlo. Si tiene dudas sobre un determinado conjunto de firmas, es una buena idea incluirlo en la política en lugar de omitirlo.
+ASM proporciona más de 2,500 firmas de ataque diseñadas para protegerse contra muchos tipos diferentes de ataques y proteger elementos de red tales como sistemas operativos, servidores web, 
+bases de datos, marcos y aplicaciones. Las actualizaciones se proporcionan periódicamente.
+También puede crear firmas personalizadas, si es necesario, para proteger su aplicación. Además, puede crear firmas para proteger parámetros de entrada de usuario alfanuméricos específicos.
+Todas las firmas de ataque están organizadas en conjuntos y se almacenan en el grupo de firmas de ataques en ASM. Si sabe en qué sistemas está basada su aplicación (Windows, SQL, IIS, UNIX / Linux, Apache, etc.), 
+puede permitir que el sistema elija las firmas de ataque apropiadas para incluir en la política de seguridad.
+
+Session Hijacking
+Session Hijacking (secuestro o robo de sesión) se refiere a que un individuo (atacante) consigue el identificador de sesión entre una página web y un usuario, de forma que puede hacerse pasar por este y 
+acceder a su cuenta en esa página web.
+El robo de la sesión puede conseguirse de varias formas, aunque en este artículo nos centraremos en las que tienen que ver con las vulnerabilidades de las sesiones y en algunas técnicas para mitigarlas.
+Como pudimos ver en el artículo sobre el funcionamiento de las sesiones, la única forma que tiene la página web de reconocer a un usuario es por medio de su identificador de sesión. 
+Si un atacante consigue el identificador de sesión de un usuario que ya está autenticado, puede hacerse pasar por él y entrar en su cuenta sólo con hacer que su navegador envíe el identificador a la página web, 
+ya sea a través de la URL o de una cookie.
