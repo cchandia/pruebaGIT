@@ -48,3 +48,5 @@ El robo de la sesión puede conseguirse de varias formas, aunque en este artícu
 Como pudimos ver en el artículo sobre el funcionamiento de las sesiones, la única forma que tiene la página web de reconocer a un usuario es por medio de su identificador de sesión. 
 Si un atacante consigue el identificador de sesión de un usuario que ya está autenticado, puede hacerse pasar por él y entrar en su cuenta sólo con hacer que su navegador envíe el identificador a la página web, 
 ya sea a través de la URL o de una cookie.
+
+Esto es nuevo
